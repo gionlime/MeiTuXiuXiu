@@ -15,6 +15,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
+import android.widget.Toast;
 
 /**
  * Description：
@@ -168,7 +169,7 @@ public class HAutoScrollRecylerView extends RecyclerView {
             duration = (int) ((Math.abs(deep) / mScrollSpeed));
         }
         mLastx = start;
-        mScroller.startScroll(start, 0, deep, 0, duration);
+        mScroller.startScroll(start, 0, deep, 0, 500);
         postInvalidate();
     }
 
