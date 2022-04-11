@@ -15,14 +15,13 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
-import android.widget.Toast;
 
 /**
  * Description：
  * Author: Hansion
  * Time: 2017/7/3 10:48
  */
-public class HAutoScrollRecylerView extends RecyclerView {
+public class AutoScrollRecylerView extends RecyclerView {
 
     private Context mContext;
 
@@ -40,22 +39,22 @@ public class HAutoScrollRecylerView extends RecyclerView {
     private int mLastx = 0;
 
 
-    public HAutoScrollRecylerView(Context context) {
+    public AutoScrollRecylerView(Context context) {
         this(context, null);
     }
 
-    public HAutoScrollRecylerView(Context context, @Nullable AttributeSet attrs) {
+    public AutoScrollRecylerView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public HAutoScrollRecylerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public AutoScrollRecylerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
         if (attrs != null) {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.HAutoScrollRecylerView);
-            setItemSpace(typedArray.getInt(R.styleable.HAutoScrollRecylerView_itemSpace,0));
-            setScrollSpeed(typedArray.getFloat(R.styleable.HAutoScrollRecylerView_speed, 0.9f));
-            setInterpolator(typedArray.getInt(R.styleable.HAutoScrollRecylerView_interpolator, 0));
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AutoScrollRecylerView);
+            setItemSpace(typedArray.getInt(R.styleable.AutoScrollRecylerView_itemSpace,0));
+            setScrollSpeed(typedArray.getFloat(R.styleable.AutoScrollRecylerView_speed, 0.9f));
+            setInterpolator(typedArray.getInt(R.styleable.AutoScrollRecylerView_interpolator, 0));
             typedArray.recycle();
         }
         initData();

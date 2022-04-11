@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hansion.hautoscrollrecyclerview.HAutoScrollRecylerView
+    <com.hansion.hautoscrollrecyclerview.AutoScrollRecylerView
         android:id="@+id/mHRecyclerView"
         app:speed="0.9"
         app:itemSpace="20"

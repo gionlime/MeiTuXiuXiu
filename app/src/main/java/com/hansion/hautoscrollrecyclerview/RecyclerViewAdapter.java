@@ -12,14 +12,14 @@ import android.widget.ImageView;
  * Author: Hansion
  * Time: 2017/7/3 16:24
  */
-public class HRecyclerViewAdapter extends RecyclerView.Adapter<HRecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private int[] mDatas;
-    private HAutoScrollRecylerView mHAutoScrollRecylerView = null;
+    private AutoScrollRecylerView mHAutoScrollRecylerView = null;
     private LayoutInflater mInflater;
     private OnItemClickLitener mOnItemClickLitener;
 
-    public HRecyclerViewAdapter(Activity activity, HAutoScrollRecylerView hAutoScrollRecylerView, int[] datas) {
+    public RecyclerViewAdapter(Activity activity, AutoScrollRecylerView hAutoScrollRecylerView, int[] datas) {
         this.mHAutoScrollRecylerView = hAutoScrollRecylerView;
         mDatas = datas;
         mInflater = LayoutInflater.from(activity);

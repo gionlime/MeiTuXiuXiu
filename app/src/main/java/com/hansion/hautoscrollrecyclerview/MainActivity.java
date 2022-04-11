@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements HRecyclerViewAdapter.OnItemClickLitener {
+public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.OnItemClickLitener {
 
 
     private final int[] mIds = {R.drawable.aaaa, R.drawable.bbbb, R.drawable.cccc, R.drawable.dddd,
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements HRecyclerViewAdap
             R.drawable.eeee, R.drawable.ffff, R.drawable.gggg, R.drawable.hhhh,
             R.drawable.iiii, R.drawable.jjjj};
 
-    private HAutoScrollRecylerView mHRecyclerView;
+    private AutoScrollRecylerView mHRecyclerView;
 
 
     @Override
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity implements HRecyclerViewAdap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mHRecyclerView = (HAutoScrollRecylerView) findViewById(R.id.mHRecyclerView);
+        mHRecyclerView = (AutoScrollRecylerView) findViewById(R.id.mHRecyclerView);
 
-        HRecyclerViewAdapter adapter = new HRecyclerViewAdapter(this, mHRecyclerView, mIds);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mHRecyclerView, mIds);
         adapter.setOnItemClickLitener(this);
         mHRecyclerView.setAdapter(adapter);
     }
